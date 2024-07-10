@@ -1,0 +1,9 @@
+[
+    {
+        "id":1,
+        "productId":2,
+        "nameProduct":"Product 1",
+        "price":200,
+        "ownImage":"img.jpg"
+    }
+]

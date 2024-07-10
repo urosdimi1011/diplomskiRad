@@ -1,0 +1,56 @@
+[
+    {
+        "id":1,
+        "img":"banner-4.jpg",
+        "alt":"banner",
+        "name":"Bestseller Products",
+        "subDesc":"PC & Docking Station",
+        "desc":"Discount 20% Off, Top Quality Products",
+        "type":"deal"
+    },
+    {
+        "id":2,
+        "img":"banner-5.jpg",
+        "alt":"banner",
+        "name":"Featured Products",
+        "subDesc":"Accessories iPhone",
+        "desc":"Free Shipping All Order Over $99",
+        "type":"deal"
+    },
+    {
+        "id":3,
+        "img":"banner-2.jpg",
+        "alt":"banner",
+        "name":"Bestseller Products",
+        "subDesc":"PC & Docking Station",
+        "desc":"Discount 20% Off, Top Quality Products",
+        "type":"sell"
+    },
+    {
+        "id":4,
+        "img":"banner-7.jpg",
+        "alt":"banner",
+        "name":"Electronic Deals",
+        "subDesc":"Laptop, Computer, Smartphone, Gampad",
+        "desc":"Shop Deals",
+        "type":"sell"
+    },
+    {
+        "id":5,
+        "img":"banner-8.jpg",
+        "alt":"banner",
+        "name":"Hot Products",
+        "subDesc":"Laptop Ultra 4K 16”",
+        "desc":"Discount  20% On Products",
+        "type":"sell"
+    },
+    {
+        "id":6,
+        "img":"banner-8.jpg",
+        "alt":"banner",
+        "name":"HOT DEALS",
+        "subDesc":"Sport Edition",
+        "desc":"Best Choice of The Year",
+        "type":"deal"
+    }
+]

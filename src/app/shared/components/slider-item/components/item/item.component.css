@@ -1,0 +1,14 @@
+.new{
+    background-color: yellow !important;
+}
+.product__thumb .product__offer{
+    width: 50% !important;
+}
+.moje{
+    display: inline-block !important;
+    width: 80%;
+}
+.moje > * {
+    display: inline-block !important;
+    margin: 3px !important;
+}

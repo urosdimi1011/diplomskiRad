@@ -1,0 +1,35 @@
+<section class="topsell__area-2 pt-15">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section__head d-flex justify-content-between mb-10">
+                    <div class="section__title">
+                        <h5 class="st-titile">Top {{activeType}} Products</h5>
+                    </div>
+                    <div class="product__nav-tab">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="tab-content" id="flast-sell-tabContent ">
+                    <mat-tab-group mat-align-tabs="end" [selectedIndex]="active">
+                            <ng-container *ngFor="let c of categoriesAll">
+                                <ng-container *ngIf="getProductsFromFilterCategories(c.id).length">
+                                <mat-tab [label]="c.name">
+                                    <div class="swiper-wrapper">
+                                        <ng-container *ngFor="let o of getProductsFromFilterCategories(c.id)">
+                                            <app-item [o]="o" [typeForSorting]="propertyForSort"></app-item>
+                                        </ng-container>
+                                    </div>
+                                </mat-tab>
+                                </ng-container>
+                            </ng-container>
+                    </mat-tab-group> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

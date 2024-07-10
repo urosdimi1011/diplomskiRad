@@ -1,0 +1,39 @@
+<div class="product__item swiper-slide">
+    <div class="product__thumb fix">
+        <div class="product-image w-img">
+            <a [routerLink]="['/products',o.id]">
+                <img src="{{path+o.imagesFileName[0]}}" alt="product">
+            </a>
+        </div>
+        <div class="product__offer">
+            <div class="moje">
+                <div [innerHTML]="typeForSorting.style"></div>
+                <!-- <ng-container *ngIf="o.precenteSale">
+                    <span class="discount">-{{o.precenteSale | percent}}</span>
+                </ng-container> -->
+            </div>
+        </div>
+        <div class="product-action">
+            <a class="icon-box icon-box-1" (click)="openModal()">
+                <i class="fal fa-eye"></i>
+                <i class="fal fa-eye"></i>
+            </a>
+        </div>
+    </div>
+    <div class="product__content">
+        <h6><a routerLink="/products/">{{o.name}}</a></h6>
+        <div class="rating mb-5">
+            <ul>
+                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                <li><a href="#"><i class="fal fa-star"></i></a></li>
+            </ul>
+            <span>(01 review)</span>
+        </div>
+        <div class="price">
+            <span>{{o.price | currency }}</span>
+        </div>
+    </div>
+</div>

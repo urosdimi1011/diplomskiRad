@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"Computer"
+    },
+    {
+        "id":2,
+        "name":"Samsung"
+    },
+    {
+        "id":3,
+        "name":"HTC"
+    },
+    {
+        "id":4,
+        "name":"Nokia"
+    },
+    {
+        "id":5,
+        "name":"Cell Phones"
+    }
+]

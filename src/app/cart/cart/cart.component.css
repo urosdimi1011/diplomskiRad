@@ -1,0 +1,6 @@
+.minHeight{
+    min-height: 500px;
+    display: block;
+    width: max-content;
+    margin: 4rem auto;
+}

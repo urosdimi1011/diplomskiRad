@@ -1,0 +1,44 @@
+<main>
+    <app-info></app-info>
+   <section class="banner__area pt-20 pb-10">
+       <div class="container">
+           <div class="row">
+               <ng-container *ngFor="let a of bannerForSort('sell',$any(3))">
+                    <app-banner [banner]="a" class="sirina"></app-banner>
+               </ng-container>
+           </div>
+       </div>
+   </section>
+
+   <!-- <app-slider-item [typeForSort]="'sell'"></app-slider-item> -->
+
+   <section class="banner__area banner__area-d pb-10">
+       <div class="container">
+           <div class="row">
+            <ng-container *ngFor="let a of bannerForSort('deal',$any(2))">
+                <app-banner [banner]="a" class="sirina2"></app-banner>
+           </ng-container>
+           </div>
+       </div>
+   </section>
+
+   <section class="moveing-text-area">
+       <div class="container">
+           <div class="ovic-running">
+               <div class="wrap">
+                   <div class="inner">
+                       <p class="item">Free UK Delivery - Return Over $100.00 ( Excluding Homeware )   |   Free UK Collect From Store</p>
+                       <p class="item">Design Week / 15% Off the website / Code: AYOSALE-2020</p>
+                       <p class="item">Always iconic. Now organic. Introducing the $20 Organic Tee.</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <app-slider-item [typeForSort]="'new'"></app-slider-item>
+
+   <app-brand-slider></app-brand-slider>
+
+
+</main>

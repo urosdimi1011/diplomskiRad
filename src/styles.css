@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; } */
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+    box-sizing: border-box;
+}
+a{
+    cursor: pointer !important;
+    text-decoration: none;
+}
+.mat-tab-label .mat-tab-label-content{
+    color: black !important;
+}
+
+.mat-form-field-label{
+    color: black !important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: rgba(0,0,0,.1);
+}
+
+.mat-slider-horizontal .mat-slider-wrapper{
+    background-color: rgba(0,0,0,.1) !important;
+}
+.mat-slider-horizontal{
+    width: 100%;
+    height: 58px;
+}
+.mat-table{
+    width: 100% !important;
+}
+td,th{
+    padding: 0px 24px !important;
+}

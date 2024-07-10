@@ -1,0 +1,47 @@
+<div class="comment-block" [ngClass]="class ? class : ''">
+    <div class="header-inner">
+        <div class="header-comment">
+            <div class="author">{{comm.name}}</div>
+            <!-- <div class="date">{{comm.comment.date}}</div> -->
+        </div>
+    </div>
+    <span>Comments: </span>
+    <div class="comment-text">{{comm.desc}}</div>
+    <div class="form-replay" *ngIf="showForm">
+        <form class="moje" [formGroup]="commentFrom.form">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Title" value="" formControlName="title">
+                <mat-error>
+                    <ng-container *ngIf="errorMess('name','required')">
+                        Name is required
+                    </ng-container>
+                    <ng-container *ngIf="errorMess('name','minlength')">
+                        Name has be contains minimum 4 length
+                    </ng-container>
+                    <ng-container *ngIf="errorMess('name','maxlength')">
+                        Name has be contains maximum 20 length
+                    </ng-container>
+                </mat-error> 
+            </mat-form-field>
+            <mat-form-field class="example-full-width w-50 p-2" appearance="fill">
+                <mat-label>Text comment</mat-label>
+                <textarea matInput placeholder="Something write..." formControlName="comment"></textarea>
+            </mat-form-field>
+              <button mat-button color="primary" (click)="addComment(comm.id)">Send</button>  
+              <button mat-button color="primary" (click)="openModalWithComment()">Canceled</button>  
+        </form>
+    </div>
+    
+    <a class="comment-text m-2 d-inline-block" (click)="openModalWithComment()">Replay</a>
+
+    <ng-container *ngIf="comm.comment.length > 0">
+        <a (click)="toggle()"> See {{comm.comment.length}} comments: </a>
+
+        <div *ngIf="show" @ngIfAnimation>
+            <ng-container *ngFor="let a of comm.comment">
+                <app-comment [comm]="a" [class]="'smallComment'"></app-comment>
+            </ng-container>
+        </div>
+
+    </ng-container>
+</div>

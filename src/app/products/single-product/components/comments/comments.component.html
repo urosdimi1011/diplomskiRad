@@ -1,0 +1,13 @@
+<div class="comments-block">
+    <p class="h3">Comments</p>
+            <ng-container *ngFor="let a of comments">
+                <div *ngIf="a.comment?.length; else elseBlock">
+                    <ng-container *ngFor="let o of a.comment">
+                        <app-comment [comm]="o" [productId]="product" (isAdded)="reloadComment($event)"></app-comment>
+                    </ng-container>
+                </div>
+            </ng-container>
+    <ng-template #elseBlock>
+         <p class="not-product-comment">None comments for this product, <a href='#'>add comment</a></p>
+    </ng-template>
+</div>

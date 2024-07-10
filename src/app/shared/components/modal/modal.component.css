@@ -1,0 +1,10 @@
+.product__price{
+    text-align: center !important;
+}
+.product__review{
+    justify-content: center !important;
+}
+.btn-moje{
+    margin: auto;
+    background: #fcbe00;
+}

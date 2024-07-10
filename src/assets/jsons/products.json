@@ -1,0 +1,120 @@
+[
+    {
+        "id":1,
+        "name":"Mojeeeeeeeeeee Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-5.jpg",
+        "review":10,
+        "categories":[1,2],
+        "price":500,
+        "dataFrom":"2022-07-07"
+    },
+    {
+        "id":2,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-1.jpg",
+        "review":10,
+        "categories":[3,5],
+        "precenteSale":0.55,
+        "price":400,
+        "dataFrom":"2021-08-11"
+    },
+    {
+        "id":3,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-4.jpg",
+        "review":10,
+        "categories":[2,3],
+        "precenteSale":0.25,
+        "price":200,
+        "dataFrom":"2021-10-11"
+    },
+    {
+        "id":4,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-2.jpg",
+        "review":10,
+        "categories":[1,3],
+        "precenteSale":0.15,
+        "price":200,
+        "dataFrom":"2021-12-11"
+    },
+    {
+        "id":5,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-2.jpg",
+        "review":10,
+        "categories":[1,3],
+        "precenteSale":0.15,
+        "price":200,
+        "dataFrom":"2022-03-01"
+    },
+    {
+        "id":6,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-2.jpg",
+        "review":10,
+        "categories":[1,3],
+        "precenteSale":0.15,
+        "price":200,
+        "dataFrom":"2022-02-01"
+    },
+    {
+        "id":7,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-2.jpg",
+        "review":10,
+        "categories":[1,3],
+        "precenteSale":0.15,
+        "price":200,
+        "dataFrom":"2021-02-01"
+    },
+    {
+        "id":8,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-2.jpg",
+        "review":10,
+        "categories":[1,3],
+        "precenteSale":0.15,
+        "price":200,
+        "dataFrom":"2020-02-01"
+    },
+    {
+        "id":9,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-2.jpg",
+        "review":10,
+        "categories":[1,3],
+        "precenteSale":0.15,
+        "price":200,
+        "dataFrom":"2020-01-01"
+    },
+    {
+        "id":10,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-3.jpg",
+        "review":10,
+        "categories":[1],
+        "price":200,
+        "dataFrom":"2021-07-07"
+    },
+    {
+        "id":11,
+        "name":"Solo3 Wireless On-Ear Headphones",
+        "stars":3.4,
+        "img":"tp-1.jpg",
+        "review":10,
+        "categories":[5,2],
+        "price":200,
+        "dataFrom":"2021-08-08"
+    }
+]

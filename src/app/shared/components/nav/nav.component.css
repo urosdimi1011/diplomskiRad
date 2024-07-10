@@ -1,0 +1,21 @@
+ul{
+    margin:0px;
+}
+ul li a{
+    text-decoration: none;
+}
+
+.main-menu ul li{
+    display: inline-block;
+    margin-right: 26px;
+    position: relative;
+}
+.main-menu2 ul li{
+    display: block;
+    position: relative;
+
+}
+.main-menu2 ul li a{
+    padding: 5px;
+    margin: 0px;
+}

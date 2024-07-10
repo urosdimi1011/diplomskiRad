@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.row>*{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.btn-moje{
+    background-color: #fcbe00;
+    border:1px solid #fcbe00;
+    transition: all 100ms ease;
+}
+.btn-moje:hover{
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.4);
+    transition: all 200ms ease;
+}

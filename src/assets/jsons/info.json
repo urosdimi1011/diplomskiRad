@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Free Delivery",
+        "desc":"For all orders over $120",
+        "icon":"fad fa-user-headset"
+    },
+    {
+        "id":2,
+        "name":"Safe payment",
+        "desc":"100% secure payment",
+        "icon":"fal fa-money-check"
+    },
+    {
+        "id":3,
+        "name":"24/7 help center",
+        "desc":"Delicated 24/7 support",
+        "icon":"fal fa-comments-alt"
+    },
+    {
+        "id":4,
+        "name":"Friendly services",
+        "desc":"30 day satisfaction guarantee",
+        "icon":"fad fa-user-headset"
+    }
+]

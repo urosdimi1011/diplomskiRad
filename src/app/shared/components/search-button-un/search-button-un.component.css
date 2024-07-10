@@ -1,0 +1,21 @@
+.search-container {
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+}
+input[type="text"] {
+    display: block;
+    width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    padding: 10px;
+    border: 2px solid #fcbe00;
+}
+
+button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}

@@ -1,0 +1,13 @@
+/* .breadcrumb__wrapper .breadcrumb .breadcrumb-item + .breadcrumb-item::before{
+    content: ">" !important;
+} */
+.mat-slider-horizontal .mat-slider-wrapper{
+    background-color: red !important;
+}
+.displayInline{
+    width: 100%;
+}
+
+.mojaListaVrednosti{
+    padding: 5px 10px;
+}

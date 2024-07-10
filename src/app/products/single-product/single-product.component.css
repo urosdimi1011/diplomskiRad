@@ -1,0 +1,44 @@
+.mat-tab-labels{
+    justify-content: center !important;
+}
+.mat-tab-list{
+    justify-content: center !important;
+}
+.example-form{
+    width: 40%;
+    margin-top: 20px;
+}
+.example-form *{
+    display: block !important;
+}
+.vr-line{
+    width: 10%;
+    /* height: 100%; */
+    /* background-color: red; */
+    margin: 0px 10px;
+}
+.vr-line > *{
+    width: .5%;
+    height: 90%;
+    margin: 10px auto;
+    background-color: rgba(255,0,0,0.4);
+
+}
+.wrap{
+    display:flex;
+}
+.comments-block{
+    width:60%
+}
+.comment-block{
+    border: 1px solid black;
+    width:100%;
+    min-height: 100px;
+    margin: 10px 0px;
+}
+.slika{
+    width: 80%;
+}
+.slika *{
+    width: 100%;
+}

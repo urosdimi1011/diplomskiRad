@@ -1,0 +1,54 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+  
+      <ng-container *ngFor="let column of allColumns">
+        <ng-container [matColumnDef]="column.index">
+          <th mat-header-cell *matHeaderCellDef> {{ column.label }} </th>
+  
+          <td mat-cell *matCellDef="let element">
+            <ng-container [ngSwitch]="column.type">
+              <ng-container *ngSwitchCase="columnTypeEnum.Select">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(element) : null"
+                  [checked]="selection.isSelected(element)">
+                </mat-checkbox>
+              </ng-container>
+              <ng-container *ngSwitchCase="columnTypeEnum.WithButton">
+                <button class="btn text-danger" (click)="clickOnFieldWithButton(element, column)">
+                  {{ column.label }}
+                </button>
+              </ng-container>
+              <ng-container *ngSwitchDefault>
+                <ng-container *ngIf="column.label == 'Image';else elseBlock">
+                  <img src="{{path+element[column.index][0]}}" alt="{{column.label}}" class="zaSliku"/>
+                </ng-container>
+                <ng-template #elseBlock>
+                  {{element[column.index]}}
+                </ng-template>
+              </ng-container>
+            </ng-container>
+          </td>
+  
+        </ng-container>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <ng-container *ngIf="tableService.hasPaginator">
+      <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons
+        aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </ng-container>
+  
+    <hr/>
+  
+  
+  
+  
+  </div>
+  
+  <div class="add-delete-buttons">
+    <!-- <button (click)="add()">Add</button>
+    <button (click)="delete()">Delete</button> -->
+  </div>

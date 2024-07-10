@@ -1,0 +1,23 @@
+<div class="tp-pagination text-center">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="basic-pagination pt-30 pb-30">
+                <nav>
+                   <ul>
+                    <li class="prevElement">
+                        <p class="active" (click)="onPrevious()">Previous</p>
+                    </li>
+                        <ng-container *ngFor="let a of [].constructor(totalPages);let i=index">
+                            <li>
+                                <p [ngClass]="pageNo==i+1?'active':''" (click)="setPage(i+1)">{{i+1}}</p>
+                             </li>
+                        </ng-container>
+                    <li class="nextElement">
+                        <p class="active" (click)="onNext()">Next</p>
+                    </li>
+                   </ul>
+                 </nav>
+             </div>
+        </div>
+    </div>
+</div>

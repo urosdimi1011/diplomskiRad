@@ -1,0 +1,11 @@
+.authorContainer{
+    max-width: 70%;
+    margin: 30px;
+}
+.infoContainer{
+    max-width: 60%;
+    margin: 20px;
+}
+.row{
+    justify-content: center !important;
+}

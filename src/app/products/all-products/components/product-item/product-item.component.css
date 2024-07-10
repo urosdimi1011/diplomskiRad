@@ -1,0 +1,16 @@
+.displayInline{
+    display: flex !important;
+    align-items: center;
+}
+.displayInline .product__content-3{
+    padding: 20px !important;
+    text-align: center;
+}
+
+.displayInline .product__item .product__thump .product_image{
+    width: 50% !important;
+}
+
+.displayInline .product__add-cart-s{
+    width: 40% !important;
+}

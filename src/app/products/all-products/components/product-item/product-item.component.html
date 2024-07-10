@@ -1,0 +1,31 @@
+
+    <div class="product__item product__item-d {{changeDisplay}}">
+        <div class="product__thumb fix">
+            <div class="product-image w-img">
+                <a [routerLink]="['/products',p.id]">
+                    <img src="{{path+p.imagesFileName[0]}}" alt="product">
+                </a>
+            </div>
+        </div>
+        <div class="product__content-3">
+            <h6><a href="product-details.html">{{p.name}}</a></h6>
+            <div class="rating mb-5">
+                <ul>
+                    <li><a href="#"><i class="fal fa-star"></i></a></li>
+                    <li><a href="#"><i class="fal fa-star"></i></a></li>
+                    <li><a href="#"><i class="fal fa-star"></i></a></li>
+                    <li><a href="#"><i class="fal fa-star"></i></a></li>
+                    <li><a href="#"><i class="fal fa-star"></i></a></li>
+                </ul>
+                <span>(01 review)</span>
+            </div>
+            <div class="price mb-10">
+                <span>{{p.price | currency}}</span>
+            </div>
+        </div>
+        <div class="product__add-cart-s text-center">
+            <button type="button" class="wc-checkout d-flex align-items-center justify-content-center w-100" (click)="openModal()">
+                Quick View
+            </button>
+        </div>
+    </div>

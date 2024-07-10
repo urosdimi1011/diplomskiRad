@@ -1,0 +1,343 @@
+<main>
+    <!-- breadcrumb__area-start -->
+    <section class="breadcrumb__area box-plr-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="breadcrumb__wrapper">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <form action="#" [formGroup]="filterFromService.form">
+    <div class="shop-area mb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="product-widget mb-30">
+                        <h5 class="pt-title">Product categories</h5>
+                        <div class="widget-category-list mt-20" formArrayName="categories">
+                                <ng-container *ngFor="let o of allCategories;index as i">
+                                    <div class="single-widget-category">
+                                        <input type="checkbox" id="cat-item-{{o.id}}" name="cat-item" [formControlName]="o.id">
+                                        <label for="cat-item-{{o.id}}"> {{o.name}}</label>
+                                    </div>
+                                </ng-container>
+                        </div>
+                        <app-search-button-un [parent]="filterFromService.form"></app-search-button-un>
+                    </div>
+                    <div class="product-widget mb-30">
+                        <h5 class="pt-title">Filter By Price</h5>
+                        <div class="price__slider mt-30">
+                                <mat-slider
+                                thumbLabel
+                                [displayWith]="formatLabel"
+                                formControlName="rangeForPrice"
+                                tickInterval="1"
+                                step="1"
+                                min="0"
+                                max="1000"
+                                aria-label="units"></mat-slider>
+                        </div>
+                        <!-- <mat-slide-toggle >Enable Wifi</mat-slide-toggle> -->
+                    </div>
+                    <div class="product-widget mb-30">
+                        <h5 class="pt-title">Choose Color</h5>
+                        <div class="product__color mt-20">
+                            <ul>
+                               <li>
+                                  <a href="#" class="black"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="blue"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="red"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="yellow"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="pink"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="brown"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="green"></a>
+                               </li>
+                               <li>
+                                  <a href="#" class="oragne"></a>
+                               </li>
+                            </ul>
+                      </div>
+                    </div>
+                    <div class="product-widget mb-30">
+                        <h5 class="pt-title">Choose Rating</h5>
+                        <div class="widget-category-list mt-20">
+                            <form action="#">
+                                <div class="single-widget-rating">
+                                    <input type="checkbox" id="star-item-1" name="star-item">
+                                    <label for="star-item-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(54)</span>
+                                    </label>
+                                </div>
+                                <div class="single-widget-rating">
+                                    <input type="checkbox" id="star-item-2" name="star-item">
+                                    <label for="star-item-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <span>(37)</span>
+                                    </label>
+                                </div>
+                                <div class="single-widget-rating">
+                                    <input type="checkbox" id="star-item-3" name="star-item">
+                                    <label for="star-item-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <span>(7)</span>
+                                    </label>
+                                </div>
+                                <div class="single-widget-rating">
+                                    <input type="checkbox" id="star-item-4" name="star-item">
+                                    <label for="star-item-4">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <span>(5)</span>
+                                    </label>
+                                </div>
+                                <div class="single-widget-rating">
+                                    <input type="checkbox" id="star-item-5" name="star-item">
+                                    <label for="star-item-5">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <i class="fal fa-star"></i>
+                                        <span>(3)</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <div class="product-widget mb-30">
+                        <h5 class="pt-title">Choose Brand</h5>
+                        <div class="widget-category-list mt-20">
+                            <form action="#">
+                                <div class="single-widget-category">
+                                    <input type="checkbox" id="brand-item-1" name="brand-item">
+                                    <label for="brand-item-1">CarRentals <span>(12)</span></label>
+                                </div>
+                                <div class="single-widget-category">
+                                    <input type="checkbox" id="brand-item-2" name="brand-item">
+                                    <label for="brand-item-2">CarVoodoo <span>(60)</span></label>
+                                </div>
+                                <div class="single-widget-category">
+                                    <input type="checkbox" id="brand-item-3" name="brand-item">
+                                    <label for="brand-item-3">Creative <span>(41)</span></label>
+                                </div>
+                                <div class="single-widget-category">
+                                    <input type="checkbox" id="brand-item-4" name="brand-item">
+                                    <label for="brand-item-4">Impact <span>(28)</span></label>
+                                </div>
+                                <div class="single-widget-category">
+                                    <input type="checkbox" id="brand-item-5" name="brand-item">
+                                    <label for="brand-item-5">IQVia <span>(21)</span></label>
+                                </div>
+                                <div class="single-widget-category">
+                                    <input type="checkbox" id="brand-item-7" name="brand-item">
+                                    <label for="brand-item-7">LeadsGreen <span>(62)</span></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="product-widget mb-30">
+                        <h5 class="pt-title">Special Offers</h5>
+                        <div class="product__sm mt-20">
+                            <ul>
+                                <li class="product__sm-item d-flex align-items-center">
+                                    <div class="product__sm-thumb mr-20">
+                                        <a href="product-details.html">
+                                            <img src="assets/img/product/sm-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product__sm-content">
+                                        <h5 class="product__sm-title">
+                                            <a href="product-details.html">Classic Leather Backpack Daypack 2022</a>
+                                        </h5>
+                                        <div class="product__sm-price">
+                                            <span class="price">$300.00</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product__sm-item d-flex align-items-center">
+                                    <div class="product__sm-thumb mr-20">
+                                        <a href="product-details.html">
+                                            <img src="assets/img/product/sm-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product__sm-content">
+                                        <h5 class="product__sm-title">
+                                            <a href="product-details.html">Samsung Galaxy A12, 32GB, Black - (Locked)</a>
+                                        </h5>
+                                        <div class="product__sm-price">
+                                            <span class="price">$150.00</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product__sm-item d-flex align-items-center">
+                                    <div class="product__sm-thumb mr-20">
+                                        <a href="product-details.html">
+                                            <img src="assets/img/product/sm-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product__sm-content">
+                                        <h5 class="product__sm-title">
+                                            <a href="#">Coffee Maker AH240a Full Function</a>
+                                        </h5>
+                                        <div class="product__sm-price">
+                                            <span class="price">$300.00</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product__sm-item d-flex align-items-center">
+                                    <div class="product__sm-thumb mr-20">
+                                        <a href="product-details.html">
+                                            <img src="assets/img/product/sm-4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product__sm-content">
+                                        <h5 class="product__sm-title">
+                                            <a href="product-details.html">Imported Wooden Felt Cushion Chair</a>
+                                        </h5>
+                                        <div class="product__sm-price">
+                                            <span class="price">$120.00</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product__sm-item d-flex align-items-center">
+                                    <div class="product__sm-thumb mr-20">
+                                        <a href="product-details.html">
+                                            <img src="assets/img/product/sm-5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product__sm-content">
+                                        <h5 class="product__sm-title">
+                                            <a href="product-details.html">Sunhouse Decorative Lights - Imported</a>
+                                        </h5>
+                                        <div class="product__sm-price">
+                                            <span class="price">$110.00</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-xl-9 col-lg-8">
+                    <div class="shop-banner mb-30">
+                        <div class="banner-image">
+                            <img class="banner-l" src="assets/img/banner/sl-banner.jpg" alt="">
+                            <img class="banner-sm" src="assets/img/banner/sl-banner-sm.png" alt="">
+                            <div class="banner-content text-center">
+                                <p class="banner-text mb-30">Hurry Up! <br> Free Shipping All Order Over $99</p>
+                                <a href="shop.html" class="st-btn-d b-radius">Discover now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-lists-top">
+                        <div class="product__filter-wrap">
+                            <div class="row align-items-center">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                    <div class="product__filter d-sm-flex align-items-center">
+                                        <div class="product__col">
+                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                  <button #button1 class="nav-link" id="FourCol-tab" type="button" [ngClass]="{ 'active' : isValue == 1 }" (click)="changeStyleDisplay('normal',$any(1))">
+                                                    <i class="fal fa-th"></i>
+                                                  </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                  <button #button2 class="nav-link" id="FiveCol-tab" type="button" [ngClass]="{ 'active' : isValue == 2 }" (click)="changeStyleDisplay('displayInline',$any(2))">
+                                                    <i class="fal fa-list"></i>
+                                                  </button>
+                                                </li>
+                                              </ul>
+                                        </div>
+                                        <div class="product__result pl-60">
+                                            <p>Showing 1-{{showPerPage}} of {{!!allProducts ? allProducts.length:'0'}} relults</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                    <div class="product__filter-right d-flex align-items-center justify-content-md-end">
+                                            <select formControlName="perPage" class="mojaListaVrednosti">
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="40">40</option>
+                                            </select>
+                                            <select formControlName="sortProducts" class="mojaListaVrednosti">
+                                                <option value="defalut" hidden>Sort Products</option>
+                                                <option value="asc">Price low to high</option>
+                                                <option value="desc">Price high to low</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="tab-content" id="productGridTabContent">
+                        <div class="tab-pane fade  show active" id="FourCol" role="tabpanel" aria-labelledby="FourCol-tab">
+                            <div class="tp-wrapper">
+                                <div class="row g-0">
+                                    <ng-container *ngIf="filterProducts.length>0;else noneProducts">
+                                        <ng-container *ngFor="let p of filterProducts">
+                                            <app-product-item [product]="p" class="col-xl-3 col-lg-4 col-md-6 col-sm-6 {{changeDisplay}}" [changeDisplay]="changeDisplay"></app-product-item>
+                                        </ng-container>
+                                    </ng-container>
+                                    <ng-template #noneProducts>
+                                        <p class="text-center m-5 h2 ">None products</p>
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-container *ngIf="filterProducts.length">
+                        <app-paginate [totalProducts]="totalProducts" 
+                                        [perPage]="showPerPage"
+                                        (onChangeEventEmitter)="getAllFilter($event)"
+                                         ></app-paginate>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shop-area-end -->
+</form>
+</main>

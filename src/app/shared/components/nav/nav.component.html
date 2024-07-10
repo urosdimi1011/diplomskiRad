@@ -1,0 +1,7 @@
+<div class="main-menu d-none d-lg-block" [ngClass]="classToStyle">
+    <nav>
+        <ul>
+            <li *ngFor="let a of navigation"><a [routerLink]="a.src" routerLinkActive="active">{{a.name}}</a></li>
+        </ul>
+    </nav>
+</div>
